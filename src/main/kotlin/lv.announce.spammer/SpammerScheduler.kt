@@ -14,11 +14,11 @@ class SpammerScheduler(
 ) {
     private val log = LoggerFactory.getLogger(SpammerScheduler::class.java)
 
-    @Scheduled(initialDelay = 5000, fixedDelay = 20)
+    @Scheduled(initialDelay = 2000, fixedDelay = 80)
     fun spam() {
         val message = UUID.randomUUID().toString()
         try {
-            val result = restTemplate.postForEntity(properties.workerNotificationUrl, "", NotificationResult::class.java)
+            val result = restTemplate.postForEntity(properties.workerNotificationUrl, message, NotificationResult::class.java)
             if (result.statusCode.is2xxSuccessful) {
                 val receiver = result.body?.serviceName ?: "NULL"
                 log.info("Sent message:[$message]. Receiver instance:[$receiver]")

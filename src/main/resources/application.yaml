@@ -9,4 +9,4 @@ spring:
     name: spammer
 
 spammer:
-  worker-notification-url: localhost:8081/worker/notification
+  worker-notification-url: http://localhost:8381/worker/notification
