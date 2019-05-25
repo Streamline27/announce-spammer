@@ -20,8 +20,9 @@ class SpammerScheduler(
         if (result.statusCode.is2xxSuccessful) {
             val receiver = result.body?.serviceName ?: "NULL"
             log.info("Sent message:[$message]. Receiver instance:[$receiver]")
+        } else {
+            log.info("Sent message:[$message]. Response code:[${result.statusCodeValue}]")
         }
-        else log.info("Sent message:[$message]. Response code:[${result.statusCodeValue}]")
     }
 
     data class NotificationResult(
