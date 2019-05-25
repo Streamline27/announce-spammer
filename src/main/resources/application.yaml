@@ -1,0 +1,12 @@
+server:
+  port: 8380
+  servlet:
+    context-path: /spammer
+spring:
+  profiles:
+    active: local
+  application:
+    name: spammer
+
+spammer:
+  worker-notification-url: localhost:8081/worker/notification

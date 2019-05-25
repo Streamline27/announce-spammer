@@ -1,0 +1,15 @@
+server:
+  tomcat:
+    accesslog:
+     enabled: true
+     prefix: spammer
+     rename-on-rotate: true
+     directory: /logs
+spring:
+  profiles:
+    active: docker
+  application:
+    name: ${INSTANCE_NAME}
+
+spammer:
+  worker-notification-url: ${WORKER_NOTIFICATION_URL}

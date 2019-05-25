@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  announce.spammer:
+    build: ./
+    image: streamline27/announce.spammer:latest
+    container_name: announce.spammer
+    ports:
+      - "8380:8380"
+    environment:
+      - "spring.profiles.active=docker"
+#    volumes:
+#      - "/Users/Vladislav/Development/Home/Kotlin/logs:/logs"
