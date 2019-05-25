@@ -14,7 +14,7 @@ class SpammerScheduler(
 ) {
     private val log = LoggerFactory.getLogger(SpammerScheduler::class.java)
 
-    @Scheduled(initialDelay = 2000, fixedDelayString = "\${spammer.message-interval-millise}")
+    @Scheduled(initialDelay = 2000, fixedDelayString = "\${spammer.message-interval-millis}")
     fun spam() {
         val message = UUID.randomUUID().toString()
         try {
