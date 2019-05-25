@@ -12,4 +12,5 @@ spring:
     name: ${INSTANCE_NAME}
 
 spammer:
+  message-interval-millis: ${MESSAGE_INTERVAL_MILLIS}
   worker-notification-url: ${WORKER_NOTIFICATION_URL}

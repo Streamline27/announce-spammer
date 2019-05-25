@@ -9,4 +9,5 @@ spring:
     name: spammer
 
 spammer:
+  message-interval-millis: 500
   worker-notification-url: http://localhost:8381/worker/notification

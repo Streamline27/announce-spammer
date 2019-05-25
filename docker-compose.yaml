@@ -8,5 +8,6 @@ services:
       - "8380:8380"
     environment:
       - "spring.profiles.active=docker"
+      - "MESSAGE_INTERVAL_MILLIS=1000"
 #    volumes:
 #      - "/Users/Vladislav/Development/Home/Kotlin/logs:/logs"
